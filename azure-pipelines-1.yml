@@ -27,11 +27,3 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/HelloFargate/Dockerfile'
         tags: |
           $(tag)
-    - task: ECRPushImage@1
-      inputs:
-        awsCredentials: 'aws'
-        regionName: 'eu-west-1'
-        imageSource: 'imagename'
-        sourceImageName: 'hellofargate'
-        repositoryName: 'hellofargaterepo'
-        autoCreateRepository: true
