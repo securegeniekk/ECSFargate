@@ -1,4 +1,12 @@
 # Docker
+- task: ECRPushImage@1
+  inputs:
+    awsCredentials: 'aws'
+    regionName: 'eu-west-1'
+    imageSource: 'imagename'
+    sourceImageName: 'hellofargate'
+    repositoryName: 'hellofargatepush'
+    autoCreateRepository: true
 # Build a Docker image 
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
